@@ -1,0 +1,8 @@
+development:
+  adapter: postgresql
+  database: LoL_stats_development
+
+test:
+  adapter: postgresql
+  database: LoL_stats_test
+
