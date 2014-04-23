@@ -11,15 +11,18 @@
   </div><br><br><br>
 
   <div class="form-group">
-    <div class="col-md-6"><%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %></div>
+    <div class="col-md-6">
+      <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %></div>
   </div><br><br>
 
   <div class="form-group">
-    <div class="col-md-6"><%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password" %></div>
+    <div class="col-md-6">
+      <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password" %></div>
   </div><br><br>
 
   <div class="form-group">
-    <div class="col-md-6"><%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Confirm Password" %></div>
+    <div class="col-md-6">
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Confirm Password" %></div>
   </div><br><br>
 
   <div class="submit"><%= f.submit "Sign up", class: 'btn btn-success' %></div>
