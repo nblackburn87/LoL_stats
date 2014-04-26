@@ -1,0 +1,17 @@
+<div class="col-md-9">
+  <h1>Result: 
+    <% if @game.result %>
+      <%= "Victory" %>
+    <% else %>
+      <%= "Defeat" %>
+    <% end %></h1>  
+    <h3><%= @game.kills %>/<%= @game.deaths %>/<%= @game.assists %>  KDA: <%= "#{(@game.kills + @game.assists) / @game.deaths}" %></h3>
+  <p>Champion: <%= @game.champion %></p>
+  <p>Role: $<%= @game.role %></p>
+  
+    <%= link_to "Edit Game", edit_game_path(@game), class: "btn btn-success btn-sm" %>
+    <%= link_to "Delete Game", game_path(@game),
+                                  data: { confirm: "Are you sure?" },
+                                  method: "delete",
+                                  :class => "btn btn-warning btn-sm" %>
+</div>
