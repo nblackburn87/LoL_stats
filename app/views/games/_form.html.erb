@@ -1,0 +1,55 @@
+<%= render '/layouts/errors', object: @game %>
+
+<%= form_for @game do |f| %>
+  <div class="form-group">
+    <div class="col-md-6">
+      <%= f.select(:result, options_for_select([["Victory", "1"], ["Defeat", "2"]])) %>
+    </div>
+  </div><br><br>
+
+  <div class="form-group">
+    <div class="col-md-6">
+      <%= f.select(:champion, options_for_select([["Lucian", "Lucian"], ["Renekton", "Renekton"], ["Shyvana", "Shyvana"]])) %>
+    </div>
+  </div><br><br>
+
+  <div class="form-group">
+    <div class="col-md-6">
+      <%= f.select(:role, options_for_select([["Top", "Top"], ["Mid", "Mid"], ["Carry Bottom", "Carry Bottom"], ["Support Bottom", "Support Bottom"], ["Jungle", "Jungle"]])) %>
+    </div>
+  </div><br><br>
+
+  <div class="form-group">
+    <div class="col-md-6">
+      <%= f.number_field :kills, class: "form-control", placeholder: "Kills" %>
+    </div>
+  </div><br><br><br>
+
+  <div class="form-group">
+    <div class="col-md-6">
+      <%= f.number_field :deaths, class: "form-control", placeholder: "Deaths" %>
+    </div>
+  </div><br><br><br>
+
+  <div class="form-group">
+    <div class="col-md-6">
+      <%= f.number_field :assists, class: "form-control", placeholder: "Assists" %>
+    </div>
+  </div><br><br><br>
+
+  <div class="form-group">
+    <div class="col-md-6">
+      <%= f.number_field :creep_score, class: "form-control", placeholder: "CS" %>
+    </div>
+  </div><br><br><br>
+
+  <div class="form-group">
+    <div class="col-md-6">
+      <%= f.number_field :gold, class: "form-control", placeholder: "Gold Earned" %>
+    </div>
+  </div><br><br><br>
+  
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
