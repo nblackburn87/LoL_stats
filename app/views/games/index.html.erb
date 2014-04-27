@@ -1,1 +1,17 @@
+<div id="add-game">
+  <%= link_to "Add Game", new_game_path, :class => "btn btn-success" %>
+</div>
+
 <h2><%= current_user.username %>'s Recent Games</h2>
+
+<div class="row">
+  <% @games.each do |game| %>
+    <div class="col-sm-6 col-md-4">
+      <% if game.result %>
+        <h4><p>Victory, <%= game.champion %>, <%= game.role %></h4><%= link_to "View game", game_path(game), :class => "btn btn-primary" %></p>
+      <% else %>
+        <h4><p>Defeat, <%= game.champion %>, <%= game.role %></h4><%= link_to "View game", game_path(game), :class => "btn btn-primary" %></p>
+      <% end %>
+    </div>
+  <% end %>
+</div>
