@@ -3,7 +3,7 @@
 <%= form_for @game do |f| %>
   <div class="form-group">
     <div class="col-md-6">
-      <%= f.select(:result, options_for_select([["Victory", "1"], ["Defeat", "2"]])) %>
+      <%= f.select :result, [["Victory", "t"], ["Defeat", "f"]] %>
     </div>
   </div><br><br>
 
